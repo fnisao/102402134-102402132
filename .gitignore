@@ -1,0 +1,5 @@
+# Local editor and OS files; project screenshots and tests remain versioned.
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
