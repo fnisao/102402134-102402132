@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="720" viewBox="0 0 1140 720" role="img" aria-label="拾光校园核心业务流程图">
+<rect width="1140" height="720" rx="26" fill="#f6faf8"/>
+<text x="60" y="70" fill="#17383d" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="bold">拾光校园 · 核心业务流程</text>
+<text x="60" y="102" fill="#70858a" font-family="Microsoft YaHei,sans-serif" font-size="14">发布 → 浏览／搜索 → 详情 → 联系 → 发布者更新状态</text>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10" fill="#0a7b7e"/></marker></defs>
+<g font-family="Microsoft YaHei,sans-serif" text-anchor="middle">
+<rect x="60" y="162" width="190" height="105" rx="17" fill="#e2f3ef" stroke="#a8d5cc"/><text x="155" y="203" font-size="19" font-weight="bold" fill="#0a7477">发布寻物／招领</text><text x="155" y="231" font-size="13" fill="#547a77">校验名称、地点等必填项</text>
+<rect x="345" y="162" width="190" height="105" rx="17" fill="#fff" stroke="#c9dfda"/><text x="440" y="203" font-size="19" font-weight="bold" fill="#17383d">校园信息列表</text><text x="440" y="231" font-size="13" fill="#70858a">按发布时间排列</text>
+<rect x="630" y="162" width="190" height="105" rx="17" fill="#fff" stroke="#c9dfda"/><text x="725" y="203" font-size="19" font-weight="bold" fill="#17383d">关键词与类别筛选</text><text x="725" y="231" font-size="13" fill="#70858a">含无结果反馈</text>
+<rect x="915" y="162" width="165" height="105" rx="17" fill="#fff0e7" stroke="#ebc9b5"/><text x="997" y="203" font-size="19" font-weight="bold" fill="#ae653e">查看详情</text><text x="997" y="231" font-size="13" fill="#977866">核对特征</text>
+<rect x="826" y="380" width="254" height="105" rx="17" fill="#fff" stroke="#c9dfda"/><text x="953" y="421" font-size="19" font-weight="bold" fill="#17383d">复制并联系发布者</text><text x="953" y="449" font-size="13" fill="#70858a">仅进行中展示联系方式</text>
+<rect x="467" y="380" width="254" height="105" rx="17" fill="#e2f3ef" stroke="#a8d5cc"/><text x="594" y="421" font-size="19" font-weight="bold" fill="#0a7477">我的发布 → 更新状态</text><text x="594" y="449" font-size="13" fill="#547a77">仅当前浏览器的发布者可操作</text>
+<rect x="60" y="380" width="253" height="105" rx="17" fill="#edf0ef" stroke="#c9d1cf"/><text x="186" y="421" font-size="19" font-weight="bold" fill="#536b68">已找到／已归还</text><text x="186" y="449" font-size="13" fill="#728682">保留记录，隐藏联系方式</text>
+<rect x="60" y="555" width="1020" height="94" rx="16" fill="#fff" stroke="#e0eae7"/><text x="570" y="594" font-size="16" font-weight="bold" fill="#17383d">异常与边界</text><text x="570" y="622" font-size="13" fill="#70858a">信息不完整 → 字段提示　·　搜索无结果 → 改用短词　·　无权限 → 禁止修改　·　已完成 → 停止展示联系方式</text>
+</g>
+<g fill="none" stroke="#0a7b7e" stroke-width="3" marker-end="url(#arrow)"><path d="M250 214 H335"/><path d="M535 214 H620"/><path d="M820 214 H905"/><path d="M997 267 V360 H953 V370"/><path d="M826 432 H731"/><path d="M467 432 H323"/></g>
+</svg>

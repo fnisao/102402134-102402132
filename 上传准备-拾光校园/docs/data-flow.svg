@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="700" viewBox="0 0 1160 700" role="img" aria-label="拾光校园页面、规则与浏览器本地存储的数据流图">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10" fill="#0a7b7e"/></marker></defs>
+<rect width="1160" height="700" rx="28" fill="#f7faf8"/>
+<text x="62" y="66" fill="#17383d" font-size="30" font-family="Microsoft YaHei,sans-serif" font-weight="bold">拾光校园 · 关键数据流</text>
+<text x="62" y="101" fill="#70858a" font-size="15" font-family="Microsoft YaHei,sans-serif">一份数据驱动首页、搜索、详情和“我的发布”</text>
+<g font-family="Microsoft YaHei,sans-serif" text-anchor="middle">
+<rect x="57" y="162" width="235" height="116" rx="18" fill="#e4f5f1" stroke="#addad0"/>
+<text x="174" y="205" font-size="20" font-weight="bold" fill="#087c80">用户操作</text><text x="174" y="238" font-size="14" fill="#597a77">发布 / 搜索 / 完成状态</text>
+<rect x="457" y="162" width="245" height="116" rx="18" fill="#fff" stroke="#cddfda"/>
+<text x="579" y="205" font-size="20" font-weight="bold" fill="#17383d">app.js · 页面层</text><text x="579" y="238" font-size="14" fill="#70858a">收集输入、导航、渲染</text>
+<rect x="858" y="162" width="245" height="116" rx="18" fill="#e4f5f1" stroke="#addad0"/>
+<text x="980" y="205" font-size="20" font-weight="bold" fill="#087c80">logic.js · 规则层</text><text x="980" y="238" font-size="14" fill="#597a77">校验、筛选、状态权限</text>
+<rect x="457" y="373" width="245" height="116" rx="18" fill="#fff0e8" stroke="#eccdbb"/>
+<text x="579" y="416" font-size="20" font-weight="bold" fill="#ae633e">localStorage · 本地数据</text><text x="579" y="449" font-size="14" fill="#92796c">保存记录与本机标识</text>
+<rect x="57" y="373" width="235" height="116" rx="18" fill="#fff" stroke="#cddfda"/>
+<text x="174" y="416" font-size="20" font-weight="bold" fill="#17383d">data.js · 演示数据</text><text x="174" y="449" font-size="14" fill="#70858a">首次打开时提供示例</text>
+<rect x="858" y="373" width="245" height="116" rx="18" fill="#fff" stroke="#cddfda"/>
+<text x="980" y="416" font-size="20" font-weight="bold" fill="#17383d">logic.test.js · 单元测试</text><text x="980" y="449" font-size="14" fill="#70858a">直接调用纯规则，不依赖页面</text>
+<rect x="57" y="562" width="1046" height="82" rx="16" fill="#e8f2ef"/>
+<text x="580" y="596" font-size="17" font-weight="bold" fill="#17383d">发布写入同一份记录 → 首页和搜索读取 → 详情展示 → 发布者完成后写回</text>
+<text x="580" y="622" font-size="13" fill="#597a77">无服务器；刷新可保留当前浏览器数据，换设备无法同步</text>
+</g>
+<g fill="none" stroke="#0a7b7e" stroke-width="3" marker-end="url(#arrow)">
+<path d="M292 220 H445"/><path d="M702 220 H845"/><path d="M579 278 V360"/><path d="M292 431 H445"/><path d="M980 373 V292"/>
+</g>
+<g font-family="Microsoft YaHei,sans-serif" fill="#70858a" font-size="13">
+<text x="340" y="203">输入</text><text x="755" y="203">调用规则</text><text x="594" y="331">读写</text><text x="305" y="413">首次加载</text><text x="995" y="328">验证</text>
+</g>
+</svg>
