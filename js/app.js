@@ -11,7 +11,7 @@
   let storageRecovered = false;
   let ownerId = readOwner();
   let posts = readPosts();
-  let state = { page: "home", detailId: null, returnPage: "home", kind: "all", category: "all", keyword: "", mineStatus: "all", formKind: "lost" };
+  let state = { page: "home", detailId: null, returnPage: "home", kind: "all", category: "all", searchStatus: "all", keyword: "", mineStatus: "all", formKind: "lost" };
 
   function readOwner() {
     try {
@@ -121,10 +121,10 @@
   }
 
   function renderSearch() {
-    const results = L.filterPosts(posts, { keyword: state.keyword, kind: state.kind, category: state.category });
+    const results = L.filterPosts(posts, { keyword: state.keyword, kind: state.kind, category: state.category, status: state.searchStatus });
     return `<section class="content-page">${header("FIND A CLUE", "找一找，或许就在这里。", "输入物品名称、地点或外观特征，快速缩小范围。")}
       <form id="search-form" class="search-form"><label class="sr-only" for="keyword">搜索关键词</label><span>⌕</span><input id="keyword" name="keyword" type="search" maxlength="60" placeholder="例如：校园卡、雨伞、图书馆" value="${e(state.keyword)}"><button class="primary-button" type="submit">搜索</button></form>
-      <div class="filter-row"><div>${kindTabs(state.kind)}</div><label class="category-label">类别 <select id="category-filter" aria-label="按类别筛选"><option value="all">全部类别</option>${L.CATEGORIES.map((category) => `<option value="${e(category)}" ${state.category === category ? "selected" : ""}>${e(category)}</option>`).join("")}</select></label></div>
+      <div class="filter-row"><div>${kindTabs(state.kind)}</div><label class="category-label">类别 <select id="category-filter" aria-label="按类别筛选"><option value="all">全部类别</option>${L.CATEGORIES.map((category) => `<option value="${e(category)}" ${state.category === category ? "selected" : ""}>${e(category)}</option>`).join("")}</select></label><label class="category-label">状态 <select id="status-filter" aria-label="按状态筛选"><option value="all" ${state.searchStatus === "all" ? "selected" : ""}>全部状态</option><option value="active" ${state.searchStatus === "active" ? "selected" : ""}>进行中</option><option value="done" ${state.searchStatus === "done" ? "selected" : ""}>已完成</option></select></label></div>
       <div class="section-heading result-heading"><div><p class="eyebrow">RESULTS</p><h3>${state.keyword ? `“${e(state.keyword)}”的搜索结果` : "全部物品"}</h3></div><span>找到 ${results.length} 条</span></div>
       <div class="card-grid">${results.length ? results.map(card).join("") : empty("暂时没有匹配的线索", "试试更短的关键词，或清除类别筛选。", "search-reset", "清除筛选")}</div></section>`;
   }
@@ -186,7 +186,7 @@
     const nav = event.target.closest("[data-nav]");
     if (nav) {
       const destination = nav.dataset.nav;
-      if (destination === "search-reset") return goto("search", { keyword: "", category: "all", kind: "all" });
+      if (destination === "search-reset") return goto("search", { keyword: "", category: "all", kind: "all", searchStatus: "all" });
       if (destination === "mine-reset") return goto("mine", { mineStatus: "all" });
       return goto(destination);
     }
@@ -216,6 +216,7 @@
 
   document.addEventListener("change", (event) => {
     if (event.target.id === "category-filter") goto("search", { category: event.target.value });
+    if (event.target.id === "status-filter") goto("search", { searchStatus: event.target.value });
     if (event.target.name === "kind" && event.target.closest("#publish-form")) state.formKind = event.target.value;
   });
 
